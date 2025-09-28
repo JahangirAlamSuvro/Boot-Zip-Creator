@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BootZip Creator - Tutorial</title>
+  <style>
+    :root {
+      --bg: #f7f9fc;
+      --text: #333;
+      --card-bg: #fff;
+      --accent: #007bff;
+      --header-gradient: linear-gradient(135deg, #4cafef, #007bff);
+      --note-bg: #eef6ff;
+      --note-text: #555;
+      --footer-text: #888;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #121212;
+        --text: #eee;
+        --card-bg: #1e1e1e;
+        --accent: #4dabf7;
+        --header-gradient: linear-gradient(135deg, #2196f3, #1565c0);
+        --note-bg: #1a2634;
+        --note-text: #ccc;
+        --footer-text: #aaa;
+      }
+    }
+
+    body {
+      font-family: "Segoe UI", Roboto, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+
+    header {
+      background: var(--header-gradient);
+      color: #fff;
+      text-align: center;
+      padding: 1.5rem 1rem;
+      border-bottom-left-radius: 20px;
+      border-bottom-right-radius: 20px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 1.8rem;
+      font-weight: bold;
+    }
+
+    main {
+      padding: 1.5rem;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .step {
+      background: var(--card-bg);
+      border-radius: 12px;
+      padding: 1.2rem;
+      margin-bottom: 1.2rem;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+      transition: transform 0.2s ease, background 0.3s ease;
+    }
+
+    .step:hover {
+      transform: translateY(-3px);
+    }
+
+    .step h2 {
+      margin-top: 0;
+      font-size: 1.3rem;
+      color: var(--accent);
+    }
+
+    .note {
+      font-size: 0.9rem;
+      color: var(--note-text);
+      background: var(--note-bg);
+      padding: 0.6rem 0.8rem;
+      border-left: 4px solid var(--accent);
+      border-radius: 6px;
+      margin-top: 0.8rem;
+    }
+
+    .video {
+      text-align: center;
+      margin: 2rem 0;
+    }
+
+    /* Responsive Vimeo embed */
+    .video iframe {
+      width: 100%;
+      max-width: 560px;
+      aspect-ratio: 16 / 9;
+      border-radius: 12px;
+      border: none;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--footer-text);
+      padding: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>BootZip Creator - Tutorial</h1>
+  </header>
+
+  <main>
+    <section class="step">
+      <h2>Step 1: Select Your Video</h2>
+      <p>Click the <b>Select Video</b> button and choose your favorite boot animation video from your device.</p>
+    </section>
+
+    <section class="step">
+      <h2>Step 2: Choose Looping Part</h2>
+      <p>Use the range slider to select the looping portion of the video for your boot animation.</p>
+      <p>Tap the <b>Play</b> button to preview only the selected part in a loop.<br>
+      To play the <i>entire</i> video instead, simply long press the Play button.</p>
+    </section>
+
+    <section class="step">
+      <h2>Step 3: Generate Boot Animation</h2>
+      <p>When ready, click the <b>Start</b> button. You’ll be asked to enter the <b>Width</b> and <b>Height</b> for the animation (used in <code>desc.txt</code>).</p>
+      <p>After clicking OK, the app will process the video and create your <code>bootanimation.zip</code>.<br>
+      The processing time may vary depending on your device performance.</p>
+      <div class="note">
+        💡 Tip: You can view previously generated boot animations in the <b>History</b> tab from the bottom navigation.
+      </div>
+    </section>
+
+    <div class="video">
+      <h2>Video Tutorial</h2>
+      <iframe src="https://player.vimeo.com/video/1122216542?h=91e6c06e08&title=0&byline=0&portrait=0" 
+              allow="autoplay; fullscreen; picture-in-picture" 
+              allowfullscreen 
+              title="BootZip Creator Tutorial"></iframe>
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2025 BootZip Creator. All rights reserved.
+  </footer>
+
+</body>
+</html>

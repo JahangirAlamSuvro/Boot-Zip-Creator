@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <item
+        android:title="Feedback"
+        tools:ignore="HardcodedText">
+        <menu>
+            <item
+                android:id="@+id/report_bug_action"
+                android:icon="@drawable/baseline_bug_report_24"
+                android:title="Report Bugs" />
+        </menu>
+    </item>
+    <item
+        android:title="Support Us"
+        tools:ignore="HardcodedText">
+        <menu>
+            <item
+                android:id="@+id/rate_action"
+                android:icon="@drawable/baseline_star_24"
+                android:title="Give Rating" />
+
+            <item
+                android:id="@+id/share_action"
+                android:icon="@drawable/baseline_share_24"
+                android:title="Share" />
+        </menu>
+    </item>
+    <item
+        android:title="Contact Us"
+        tools:ignore="HardcodedText">
+        <menu>
+            <item
+                android:id="@+id/privacy_policy_action"
+                android:icon="@drawable/baseline_policy_24"
+                android:title="Privacy &amp; Policy" />
+            <item
+                android:id="@+id/terms_of_use_action"
+                android:icon="@drawable/baseline_event_note_24"
+                android:title="Terms &amp; Conditions" />
+        </menu>
+
+    </item>
+
+</menu>

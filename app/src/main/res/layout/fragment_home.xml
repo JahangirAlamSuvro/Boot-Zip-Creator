@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.HomeFragment"
+    android:paddingVertical="5dp">
+
+    <androidx.media3.ui.PlayerView
+        android:id="@+id/exoPlayerView"
+        android:layout_width="match_parent"
+        android:layout_height="280dp"
+        android:background="@color/black"
+        android:visibility="invisible"
+        app:buffered_color="@color/white"
+        app:resize_mode="fit"
+        app:show_buffering="never"
+        app:show_shuffle_button="false"
+        app:show_subtitle_button="true"
+        app:surface_type="texture_view"
+        app:use_artwork="true"
+        app:use_controller="false"
+        android:layout_alignParentTop="true"/>
+
+    <ImageView
+        android:id="@+id/blankVideoImageView"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:contentDescription="@string/video_preview_image"
+        android:src="@drawable/video_preview_image"
+        android:layout_alignParentTop="true"
+        android:scaleType="centerCrop" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_below="@+id/exoPlayerView"
+        android:layout_above="@+id/bottomButtonsContainer">
+
+        <ImageButton
+            android:id="@+id/videoPlayPauseBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/play_pause_btn"
+            android:padding="10dp"
+            android:src="@drawable/baseline_play_circle_filled_24"
+            android:visibility="invisible"
+            tools:ignore="RedundantDescriptionCheck" />
+
+        <com.google.android.material.slider.RangeSlider
+            android:id="@+id/trimSlider"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:valueFrom="0"
+            android:valueTo="100"
+            android:stepSize="1"
+            android:visibility="invisible"
+            android:layout_marginTop="15dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/loop_selection_instruction_text"
+            android:paddingHorizontal="25dp"
+            android:textAlignment="center"
+            android:layout_marginTop="25dp"
+            android:textColor="?attr/textColor" />
+        
+    </LinearLayout>
+    
+    <LinearLayout
+        android:id="@+id/bottomButtonsContainer"
+        style="?android:attr/buttonBarStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:weightSum="2"
+        android:padding="10dp"
+        android:layout_marginBottom="15dp">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/selectVideoBtn"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="0dp"
+            android:layout_height="65dp"
+            android:layout_marginEnd="7dp"
+            android:layout_weight="1"
+            android:text="@string/select_video"
+            app:icon="@drawable/baseline_videocam_24"
+            app:iconGravity="textStart"
+            app:iconPadding="8dp"
+            app:iconSize="20dp"
+            tools:ignore="TextContrastCheck,VisualLintButtonSize" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/startBtn"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="0dp"
+            android:layout_height="65dp"
+            android:layout_marginStart="7dp"
+            android:layout_weight="1"
+            android:text="@string/start"
+            android:textColor="@color/white"
+            app:icon="@drawable/baseline_videocam_24"
+            app:iconGravity="textStart"
+            app:iconPadding="8dp"
+            app:iconSize="20dp"
+            app:iconTint="@color/white"
+            android:enabled="false"
+            tools:ignore="TextContrastCheck,VisualLintButtonSize" />
+    </LinearLayout>
+
+</RelativeLayout>
